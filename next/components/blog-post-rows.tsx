@@ -6,6 +6,29 @@ import React, { useEffect, useState } from "react";
 import FuzzySearch from "fuzzy-search";
 import { Article } from "@/types/types";
 
+// BlogPostRow component definition
+const BlogPostRow = ({ article }: { article: Article }) => (
+  <div className="py-4 flex flex-col sm:flex-row gap-4 items-start">
+    <div className="flex-1">
+      <Link
+        href={`/blog/${article.slug}`}
+        className="text-lg font-semibold text-white hover:underline"
+      >
+        {truncate(article.title, 80)}
+      </Link>
+      <p className="text-neutral-400 text-sm mt-1">
+        {truncate(article.description || "", 120)}
+      </p>
+    </div>
+    <div className="text-neutral-500 text-xs whitespace-nowrap">
+      {format(
+        new Date(article.publishedAt || article.createdAt || Date.now()),
+        "MMM dd, yyyy"
+      )}
+    </div>
+  </div>
+);
+
 export const BlogPostRows = ({ articles }: { articles: Article[] }) => {
   const [search, setSearch] = useState("");
 
@@ -45,26 +68,3 @@ export const BlogPostRows = ({ articles }: { articles: Article[] }) => {
     </div>
   );
 };
-
-// BlogPostRow component definition
-const BlogPostRow = ({ article }: { article: Article }) => (
-  <div className="py-4 flex flex-col sm:flex-row gap-4 items-start">
-    <div className="flex-1">
-      <Link
-        href={`/blog/${article.slug}`}
-        className="text-lg font-semibold text-white hover:underline"
-      >
-        {truncate(article.title, 80)}
-      </Link>
-      <p className="text-neutral-400 text-sm mt-1">
-        {truncate(article.description || "", 120)}
-      </p>
-    </div>
-    <div className="text-neutral-500 text-xs whitespace-nowrap">
-      {format(
-        new Date(article.publishedAt || article.createdAt),
-        "MMM dd, yyyy"
-      )}
-    </div>
-  </div>
-);
