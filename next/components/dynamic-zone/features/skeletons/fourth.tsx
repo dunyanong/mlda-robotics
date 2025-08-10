@@ -13,7 +13,7 @@ import {
   SlackIcon,
   TiktokIcon,
   TwitterIcon,
-  GithubIcon,
+  // GithubIcon,
 } from "@/components/icons/illustrations";
 
 var loopInterval: NodeJS.Timeout;
