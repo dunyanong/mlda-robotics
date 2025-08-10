@@ -29,19 +29,26 @@ const wordToNumber: { [key: string]: number } = {
 };
 
 function convertWordToNumber(word: string) {
-  return wordToNumber[word.toLowerCase()] || null;
+  return wordToNumber[word?.toLowerCase()] || null;
 }
 
 export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_card, social_media_card, steps }: { heading: string, sub_heading: string, globe_card: any, ray_card: any, graph_card: any, social_media_card: any, steps?: any[] }) => {
+  // Move hooks to top level
+  const whoImages = [
+    { src: "/team.jpg", alt: "MLDA Robotics Team" },
+    { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" }
+  ];
+  const competitionsImages = [
+    { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" },
+    { src: "/yokohama2.jpg", alt: "ICRA BARN 2025 Finalist" }
+  ];
+  const [whoCurrent, setWhoCurrent] = useState(0);
+  const [compCurrent, setCompCurrent] = useState(0);
+
   // Special horizontal layout for "Who are we?" section
   if (heading === "Who are we?") {
-    const images = [
-      { src: "/team.jpg", alt: "MLDA Robotics Team" },
-      { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" }
-    ];
-    const [current, setCurrent] = useState(0);
-    const prev = () => setCurrent((current - 1 + images.length) % images.length);
-    const next = () => setCurrent((current + 1) % images.length);
+    const prev = () => setWhoCurrent((whoCurrent - 1 + whoImages.length) % whoImages.length);
+    const next = () => setWhoCurrent((whoCurrent + 1) % whoImages.length);
     return (
       <GradientContainer className="md:my-20">
         <Container className="py-20 max-w-7xl mx-auto relative z-40">
@@ -56,15 +63,15 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
                   <span className="sr-only">Previous</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <Image src={images[current].src} alt={images[current].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
+                <Image src={whoImages[whoCurrent].src} alt={whoImages[whoCurrent].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
                 <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-white z-10">
                   <span className="sr-only">Next</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                 </button>
               </div>
               <div className="flex gap-2 mt-2">
-                {images.map((_, idx) => (
-                  <button key={idx} onClick={() => setCurrent(idx)} className={`w-3 h-3 rounded-full ${current === idx ? 'bg-blue-500' : 'bg-gray-300'}`}></button>
+                {whoImages.map((_, idx) => (
+                  <button key={idx} onClick={() => setWhoCurrent(idx)} className={`w-3 h-3 rounded-full ${whoCurrent === idx ? 'bg-blue-500' : 'bg-gray-300'}`}></button>
                 ))}
               </div>
             </div>
@@ -76,13 +83,8 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
 
   // Special horizontal layout for "Competitions" section
   if (heading === "Competitions") {
-    const images = [
-      { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" },
-      { src: "/yokohama2.jpg", alt: "ICRA BARN 2025 Finalist" }
-    ];
-    const [current, setCurrent] = useState(0);
-    const prev = () => setCurrent((current - 1 + images.length) % images.length);
-    const next = () => setCurrent((current + 1) % images.length);
+    const prev = () => setCompCurrent((compCurrent - 1 + competitionsImages.length) % competitionsImages.length);
+    const next = () => setCompCurrent((compCurrent + 1) % competitionsImages.length);
     return (
       <GradientContainer className="md:my-20">
         <Container className="py-20 max-w-7xl mx-auto relative z-40">
@@ -93,15 +95,15 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
                   <span className="sr-only">Previous</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <Image src={images[current].src} alt={images[current].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
+                <Image src={competitionsImages[compCurrent].src} alt={competitionsImages[compCurrent].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
                 <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-white z-10">
                   <span className="sr-only">Next</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
                 </button>
               </div>
               <div className="flex gap-2 mt-2">
-                {images.map((_, idx) => (
-                  <button key={idx} onClick={() => setCurrent(idx)} className={`w-3 h-3 rounded-full ${current === idx ? 'bg-blue-500' : 'bg-gray-300'}`}></button>
+                {competitionsImages.map((_, idx) => (
+                  <button key={idx} onClick={() => setCompCurrent(idx)} className={`w-3 h-3 rounded-full ${compCurrent === idx ? 'bg-blue-500' : 'bg-gray-300'}`}></button>
                 ))}
               </div>
             </div>

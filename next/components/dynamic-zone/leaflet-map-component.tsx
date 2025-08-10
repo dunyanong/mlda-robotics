@@ -30,7 +30,7 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
       setL(leaflet.default);
 
       // Remove any existing map instance from the container
-      if (map) {
+      if (mapRef.current && map) {
         map.remove();
         setMap(null);
       }
@@ -56,12 +56,12 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
     initializeMap();
 
     return () => {
-      if (map) {
+      if (mapRef.current && map) {
         map.remove();
         setMap(null);
       }
     };
-  }, [latitude, longitude, title, map]);
+  }, [latitude, longitude, title]);
 
   return (
     <>
