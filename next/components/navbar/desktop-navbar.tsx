@@ -17,9 +17,8 @@ import { LocaleSwitcher } from "../locale-switcher";
 const defaultLeftNavbarItems = [
   { URL: "/", text: "Home", target: "_self" },
   { URL: "/team", text: "Team", target: "_self" },
-  { URL: "/projects", text: "Projects", target: "_self" },
-  { URL: "/blog", text: "Blog", target: "_self" },
-];
+  { URL: "/papers", text: "Papers", target: "_self" },
+  { URL: "/contactus", text: "Contact Us", target: "_self" },];
 
 const defaultRightNavbarItems: {
   URL: string;

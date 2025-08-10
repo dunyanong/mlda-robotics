@@ -14,7 +14,7 @@ const getHardcodedNavbarData = () => {
     left_navbar_items: [
       { URL: "/", text: "Home", target: "_self" },
       { URL: "/team", text: "Team", target: "_self" },
-      { URL: "/projects", text: "Projects", target: "_self" },
+      { URL: "/papers", text: "Papers", target: "_self" },
       { URL: "/contactus", text: "Contact Us", target: "_self" },
     ],
     right_navbar_items: [
@@ -47,7 +47,7 @@ const getHardcodedFooterData = () => {
     internal_links: [
       { text: "About", URL: "/about", target: "_self" },
       { text: "Team", URL: "/team", target: "_self" },
-      { text: "Projects", URL: "/projects", target: "_self" }
+      { text: "Papers", URL: "/papers", target: "_self" }
     ],
     policy_links: [
       { text: "Privacy Policy", URL: "/privacy", target: "_self" },

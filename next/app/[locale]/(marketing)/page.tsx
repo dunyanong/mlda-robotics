@@ -25,8 +25,8 @@ const getHardcodedPageData = () => {
             target: "_self"
           },
           {
-            text: "Our Projects",
-            URL: "/projects",
+            text: "Our Papers",
+            URL: "/papers",
             variant: "simple",
             target: "_self"
           }

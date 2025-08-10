@@ -18,7 +18,7 @@ const defaultFooterData = {
   internal_links: [
     { text: "About", URL: "/about", target: "_self" },
     { text: "Team", URL: "/team", target: "_self" },
-    { text: "Projects", URL: "/projects", target: "_self" },
+    { text: "Papers", URL: "/papers", target: "_self" },
     { text: "Contact Us", URL: "/contactus", target: "_self" }
   ],
   policy_links: [

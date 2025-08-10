@@ -35,38 +35,13 @@ const getContactPageData = () => {
       {
         __component: "dynamic-zone.form-next-to-section",
         id: 2,
-        heading: "Visit Us",
-        sub_heading: "Come visit our lab and see our autonomous robotics systems in action.",
+        heading: "Get In Touch!",
+        sub_heading: "We will be delighted to connect with you! Whether you are looking to sponsor our programs or invite us to host an outreach event at your school, organization, or venue, do not hesitate to reach out. We are always eager for meaningful partnerships and fresh opportunities to create a positive impact.",
         form: {
-          title: "Send us a Message",
-          description: "Have a question or want to schedule a visit? Drop us a message.",
-          fields: [
-            {
-              name: "name",
-              type: "text",
-              placeholder: "Your Name",
-              required: true
-            },
-            {
-              name: "email",
-              type: "email",
-              placeholder: "Your Email",
-              required: true
-            },
-            {
-              name: "subject",
-              type: "text",
-              placeholder: "Subject",
-              required: true
-            },
-            {
-              name: "message",
-              type: "textarea",
-              placeholder: "Your message...",
-              required: true
-            }
-          ],
-          submitText: "Send Message"
+          title: "Contact Us",
+          description: "Email: ONGD0017@e.ntu.edu.sg",
+          fields: [],
+          submitText: "Send Email"
         },
         content: {
           heading: "Our Location",
@@ -101,27 +76,11 @@ const getContactPageData = () => {
         faqs: [
           {
             question: "How can I schedule a lab visit?",
-            answer: "You can schedule a visit by sending us a message through the contact form above or emailing us directly. We welcome visitors interested in our research and are happy to provide lab tours."
-          },
-          {
-            question: "What are your lab operating hours?",
-            answer: "Our lab is typically active Monday to Friday, 9 AM to 6 PM. However, as research schedules vary, we recommend contacting us in advance to ensure someone will be available to meet with you."
+            answer: "You can schedule a visit by emailing us directly. We welcome visitors interested in our research and are happy to provide lab tours."
           },
           {
             question: "Can I collaborate with your team?",
             answer: "Yes! We're always open to collaborations with other research groups, industry partners, and academic institutions. Please reach out with details about your proposed collaboration."
-          },
-          {
-            question: "Do you offer internship opportunities?",
-            answer: "We occasionally offer internship positions for qualified students. Check our recruitment page or contact us directly to inquire about current opportunities."
-          },
-          {
-            question: "How can I stay updated on your research?",
-            answer: "Follow us on our social media channels and check our website regularly for updates on our latest research, publications, and competition results."
-          },
-          {
-            question: "Can I use your research for my project?",
-            answer: "Many of our research outputs are published in academic papers. For specific collaboration or usage requests, please contact us with details about your project."
           }
         ]
       },
