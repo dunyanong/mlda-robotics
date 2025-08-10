@@ -9,14 +9,14 @@ const getHardcodedPageData = () => {
     slug: "home",
     seo: {
       metaTitle: "MLDA Robotics Team - Building Autonomous Systems",
-      metaDescription: "MLDA Robotics Team under NTU EEE, building autonomous systems. 2nd place ICRA BARN 2024, Finalist ICRA BARN 2025.",
+      metaDescription: "Robotics Team under NTU EEE and MLDA@EEE, building autonomous systems",
     },
     dynamic_zone: [
       {
         __component: "dynamic-zone.hero",
         id: 1,
         heading: "Building Autonomous Systems",
-        sub_heading: "MLDA Robotics Team under NTU EEE. 2nd place ICRA BARN 2024, Finalist ICRA BARN 2025. Pioneering the future of robotics with cutting-edge autonomous navigation systems.",
+        sub_heading: "Robotics Team under NTU EEE and MLDA@EEE. Building the future of robotics with cutting-edge autonomous navigation systems.",
         CTAs: [
           {
             text: "Join Our Team",
@@ -34,22 +34,37 @@ const getHardcodedPageData = () => {
       },
       {
         __component: "dynamic-zone.features",
-        id: 2,
-        heading: "Our Expertise",
-        sub_heading: "From classical MPC to cutting-edge SLAM, we build robust autonomous systems that win competitions.",
+        id: 10,
+        heading: "Who are we?",
+        sub_heading: "We are a passionate robotics team under NTU EEE and MLDA@EEE, focused on building autonomous systems and pushing the boundaries of robotics research.",
+      },
+      {
+        __component: "dynamic-zone.features",
+        id: 11,
+        heading: "Competitions",
+        sub_heading: "Major milestones and achievements in robotics competitions.",
+        steps: [
+          {
+            title: "ICRA BARN Challenge 2024",
+            description: "Clinched 2nd place with our advanced autonomous navigation system at Yokohama, Japan.",
+          },
+          {
+            title: "ICRA BARN Challenge 2025",
+            description: "Finalist, we will come back stronger with more innovations!"
+          }
+        ]
       },
       {
         __component: "dynamic-zone.brands",
         id: 4,
         heading: "Backed by Excellence",
-        sub_heading: "Supported by world-class institutions and powered by cutting-edge technology.",
-        // Brands will use their default hardcoded data
+        sub_heading: "Supported by world-class institutions and powered by cutting-edge technology.",        
       },
       {
         __component: "dynamic-zone.cta",
         id: 5,
         heading: "Ready to Join Us?",
-        sub_heading: "We're recruiting talented engineers in Semester 1 and 2. Be part of building the future of autonomous systems.",
+        sub_heading: "We're recruiting talented students in Semester 1 and 2. Be part of building the future of autonomous systems.",
         CTAs: [
           {
             text: "Apply Now",

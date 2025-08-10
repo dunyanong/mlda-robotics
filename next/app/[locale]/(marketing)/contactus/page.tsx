@@ -87,35 +87,15 @@ const getContactPageData = () => {
           }
         }
       },
-      {
-        __component: "dynamic-zone.features",
-        id: 3,
-        heading: "Connect With Us",
-        sub_heading: "Multiple ways to reach out and stay connected with our research and activities.",
-        globe_card: {
-          title: "Global Collaborations",
-          description: "We collaborate with researchers and institutions worldwide, advancing autonomous robotics research.",
-          span: "two"
-        },
-        ray_card: {
-          title: "Research Partnerships",
-          description: "Partner with us on cutting-edge robotics research projects and competitions.",
-          span: "one"
-        },
-        graph_card: {
-          title: "Open Source Contributions",
-          description: "Explore our open source projects and contribute to the robotics community.",
-          span: "two"
-        },
-        social_media_card: {
-          title: "Follow Our Journey",
-          description: "Stay updated with our latest research, competitions, and achievements.",
-          span: "one"
-        }
-      },
+      // {
+      //   __component: "dynamic-zone.features",
+      //   id: 3,
+      //   heading: "Connect With Us",
+      //   sub_heading: "Multiple ways to reach out and stay connected with our research and activities."
+      // },
       {
         __component: "dynamic-zone.faq",
-        id: 4,
+        id: 3,
         heading: "Frequently Asked Questions",
         sub_heading: "Common questions about contacting and visiting our lab",
         faqs: [

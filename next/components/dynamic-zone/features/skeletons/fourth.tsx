@@ -13,6 +13,7 @@ import {
   SlackIcon,
   TiktokIcon,
   TwitterIcon,
+  GithubIcon,
 } from "@/components/icons/illustrations";
 
 var loopInterval: NodeJS.Timeout;
@@ -20,75 +21,20 @@ export const SkeletonFour = () => {
   const icons = useMemo(
     () => [
       {
-        title: "Twitter",
-        icon: TwitterIcon,
-        className: "left-2 top-2",
-      },
-      {
-        title: "Meta2",
-        icon: MetaIcon,
-        className: "left-32 top-32",
-      },
-      {
         title: "Instagram",
         icon: InstagramIcon,
         className: "left-1/2 top-1/2",
-      },
-      {
-        title: "LinkedIn2",
-        icon: LinkedInIcon,
-        className: "left-1/2 top-20",
-      },
-      {
-        title: "Facebook",
-        icon: FacebookIcon,
-        className: "right-20 top-20",
-      },
-      {
-        title: "Slack2",
-        icon: SlackIcon,
-        className: "right-20 bottom-0",
-      },
-      {
-        title: "Tiktok",
-        icon: TiktokIcon,
-        className: "left-52 bottom-10",
-      },
-      {
-        title: "Meta",
-        icon: MetaIcon,
-        className: "left-32 bottom-60",
-      },
-      {
-        title: "Twitter2",
-        icon: TwitterIcon,
-        className: "right-96 top-24",
-      },
-      {
-        title: "Instagram2",
-        icon: InstagramIcon,
-        className: "left-10 bottom-0",
       },
       {
         title: "LinkedIn",
         icon: LinkedInIcon,
         className: "right-40 top-0",
       },
-      {
-        title: "Facebook2",
-        icon: FacebookIcon,
-        className: "right-40 top-40",
-      },
-      {
-        title: "Slack",
-        icon: SlackIcon,
-        className: "right-0 bottom-60",
-      },
-      {
-        title: "Tiktok2",
-        icon: TiktokIcon,
-        className: "right-10 bottom-80",
-      },
+      // {
+      //   title: "GitHub",
+      //   icon: GithubIcon,
+      //   className: "right-20 bottom-0",
+      // },
     ],
     []
   );

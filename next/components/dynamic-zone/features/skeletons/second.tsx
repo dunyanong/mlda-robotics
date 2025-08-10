@@ -58,16 +58,16 @@ export const SkeletonTwo = () => {
         className="absolute inset-0 flex flex-col group p-8 z-40"
       >
         <Container className="mt-10 ml-4">
-          <Cover>2,052</Cover>
-          satellite
+          <Cover>6</Cover>
+          brains
         </Container>
         <Container className="mt-4 ml-10 group-hover:border-secondary transition duration-200 group-hover:scale-[1.02]">
-          <Cover>8,230,002</Cover>
-          Starlinks
+          <Cover>100+</Cover>
+          commits
         </Container>
         <Container className="mt-4 ml-4">
-          <Cover>7,224</Cover>
-          rockets
+          <Cover>12+</Cover>
+          hours/week
         </Container>
         <Cursor
           className="top-40 left-0 group-hover:left-40 group-hover:top-20"
@@ -81,7 +81,7 @@ export const SkeletonTwo = () => {
           }}
           className="mt-10 ml-4"
         >
-          1 satellite
+          404 bugs not found
         </Container>
         <Container
           style={{
@@ -89,7 +89,7 @@ export const SkeletonTwo = () => {
           }}
           className="mt-4 ml-10 group-hover:border-secondary transition duration-200 "
         >
-          7 satellites
+          1337 lines of documentation
         </Container>
         <Container
           style={{
@@ -97,13 +97,13 @@ export const SkeletonTwo = () => {
           }}
           className="mt-4 ml-4"
         >
-          4 rockets
+          9001 lines of code
         </Container>
 
         <Cursor
           className="top-60 left-12 group-hover:left-32 group-hover:top-44"
           textClassName="group-hover:text-white"
-          text="Tyler Durden"
+          text="ICRA BARN Team"
           style={{
             opacity: 1 - sliderXPercent * 0.015,
           }}

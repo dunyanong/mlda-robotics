@@ -15,7 +15,6 @@ const getHardcodedNavbarData = () => {
       { URL: "/", text: "Home", target: "_self" },
       { URL: "/team", text: "Team", target: "_self" },
       { URL: "/projects", text: "Projects", target: "_self" },
-      { URL: "/blog", text: "Blog", target: "_self" },
       { URL: "/contactus", text: "Contact Us", target: "_self" },
     ],
     right_navbar_items: [
@@ -71,7 +70,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const defaultSeo = {
     metaTitle: "MLDA Robotics Team - Building Autonomous Systems",
-    metaDescription: "MLDA Robotics Team under NTU EEE, building autonomous systems. 2nd place ICRA BARN 2024, Finalist ICRA BARN 2025.",
+    metaDescription: "Robotics Team under NTU MLDA@EEE, building autonomous systems. 2nd place ICRA BARN 2024, Finalist ICRA BARN 2025.",
   };
   
   return generateMetadataObject(defaultSeo);
@@ -88,13 +87,15 @@ export default async function RootLayout({
   const footerData = getHardcodedFooterData();
 
   return (
-    <div className={`${inter.className} bg-charcoal relative`}>
+    <div className={`${inter.className} bg-charcoal min-h-screen flex flex-col relative`}>
       <LoadingProvider>
         <Navbar
           data={navbarData}
           locale={params.locale}
         />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
         <Footer footer={footerData} locale={params.locale} />
       </LoadingProvider>
     </div>

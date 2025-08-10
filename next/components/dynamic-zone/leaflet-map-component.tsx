@@ -14,11 +14,10 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
   const [L, setL] = useState<any>(null);
 
   useEffect(() => {
-    // Import Leaflet dynamically to avoid SSR issues
+    let mapInstance: any;
     const initializeMap = async () => {
       const leaflet = await import('leaflet');
-      
-      // Import CSS by adding it to the document head
+
       if (!document.querySelector('link[href*="leaflet.css"]')) {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
@@ -30,34 +29,26 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
 
       setL(leaflet.default);
 
-      if (mapRef.current && !map) {
-        const mapInstance = leaflet.default.map(mapRef.current).setView([latitude, longitude], 15);
+      // Remove any existing map instance from the container
+      if (map) {
+        map.remove();
+        setMap(null);
+      }
 
-        // Add tile layer with dark theme
+      if (mapRef.current) {
+        mapInstance = leaflet.default.map(mapRef.current).setView([latitude, longitude], 15);
         leaflet.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(mapInstance);
-
-        // Create custom marker icon
         const customIcon = leaflet.default.divIcon({
-          html: `<div style="
-            width: 16px;
-            height: 16px;
-            background-color: #ef4444;
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-          "></div>`,
+          html: `<div style="width: 16px; height: 16px; background-color: #ef4444; border: 2px solid #ffffff; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
           className: 'custom-marker',
           iconSize: [16, 16],
           iconAnchor: [8, 8],
         });
-
-        // Add marker
         leaflet.default.marker([latitude, longitude], { icon: customIcon })
           .addTo(mapInstance)
           .bindPopup(`<div style="color: #374151; font-weight: 500;">${title}</div>`);
-
         setMap(mapInstance);
       }
     };
@@ -67,9 +58,10 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
     return () => {
       if (map) {
         map.remove();
+        setMap(null);
       }
     };
-  }, [latitude, longitude, title, map]);
+  }, [latitude, longitude, title]);
 
   return (
     <>

@@ -9,66 +9,18 @@ import { CustomImage } from "@/components/ui/image";
 const defaultLogos = [
 	{
 		id: 1,
-		title: "NTU",
+		title: "NTU EEE",
 		image: {
-			url: "https://upload.wikimedia.org/wikipedia/en/f/f9/Nanyang_Technological_University.png",
-			alternativeText: "NTU Logo",
+			url: "/ntueee.jpg",
+			alternativeText: "NTU EEE Logo",
 		},
 	},
 	{
 		id: 2,
-		title: "MLDA",
+		title: "MLDA@EEE",
 		image: {
-			url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%23000080'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='28' font-family='Arial, sans-serif'%3eMLDA%3c/text%3e%3c/svg%3e",
-			alternativeText: "MLDA Logo",
-		},
-	},
-	{
-		id: 3,
-		title: "ROS",
-		image: {
-			url: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Ros_logo.svg",
-			alternativeText: "ROS Logo",
-		},
-	},
-	{
-		id: 4,
-		title: "ICRA",
-		image: {
-			url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%23FF6B35'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='24' font-family='Arial, sans-serif'%3eICRA%3c/text%3e%3c/svg%3e",
-			alternativeText: "ICRA Logo",
-		},
-	},
-	{
-		id: 5,
-		title: "CasADi",
-		image: {
-			url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%232E8B57'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='22' font-family='Arial, sans-serif'%3eCasADi%3c/text%3e%3c/svg%3e",
-			alternativeText: "CasADi Logo",
-		},
-	},
-	{
-		id: 6,
-		title: "Python",
-		image: {
-			url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-			alternativeText: "Python Logo",
-		},
-	},
-	{
-		id: 7,
-		title: "C++",
-		image: {
-			url: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
-			alternativeText: "C++ Logo",
-		},
-	},
-	{
-		id: 8,
-		title: "OpenCV",
-		image: {
-			url: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg",
-			alternativeText: "OpenCV Logo",
+			url: "/mlda.jpg",
+			alternativeText: "MLDA@EEE Logo",
 		},
 	},
 ];

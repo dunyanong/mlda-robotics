@@ -41,7 +41,7 @@ export const Footer = ({
   locale?: string 
 }) => {
   return (
-    <footer className="border-t border-neutral-800 px-8 pt-20 pb-32 relative overflow-hidden bg-black">
+    <footer className="border-t border-neutral-800 px-8 pt-20 pb-8 relative overflow-hidden bg-black">
       <Container className="flex flex-col items-start justify-start">
         <div className="md:flex items-start justify-between w-full">
           <div className="md:w-1/2">

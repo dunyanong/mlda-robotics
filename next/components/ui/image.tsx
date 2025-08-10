@@ -7,6 +7,7 @@ export const CustomImage = (props: React.ComponentProps<typeof Image>) => {
   const [isLoading, setLoading] = useState(true);
 
   const { src, width, height, alt, ...rest } = props;
+  const isLocal = typeof src === "string" && src.startsWith("/");
   return (
     <Image
       className={cn(
@@ -22,6 +23,7 @@ export const CustomImage = (props: React.ComponentProps<typeof Image>) => {
       decoding="async"
       blurDataURL={typeof src === 'string' ? src : undefined}
       alt={alt ? alt : "Image"}
+      unoptimized={isLocal}
       {...rest}
     />
   );

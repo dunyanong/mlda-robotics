@@ -17,6 +17,11 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+html, body {
+  height: 100%;
+  background: black;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
