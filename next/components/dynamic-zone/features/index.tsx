@@ -20,6 +20,7 @@ import { SkeletonFour } from "./skeletons/fourth";
 import { IconContainer } from "./icon-container";
 import { InstagramIcon, LinkedInIcon } from "@/components/icons/illustrations";
 import { IconBrandGithub } from "@tabler/icons-react";
+import Image from "next/image";
 
 const wordToNumber: { [key: string]: number } = {
   one: 1,
@@ -55,7 +56,7 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
                   <span className="sr-only">Previous</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <img src={images[current].src} alt={images[current].alt} className="rounded-xl shadow-lg w-full object-cover" />
+                <Image src={images[current].src} alt={images[current].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
                 <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-white z-10">
                   <span className="sr-only">Next</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
@@ -92,7 +93,7 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
                   <span className="sr-only">Previous</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
                 </button>
-                <img src={images[current].src} alt={images[current].alt} className="rounded-xl shadow-lg w-full object-cover" />
+                <Image src={images[current].src} alt={images[current].alt} width={400} height={300} className="rounded-xl shadow-lg w-full object-cover" />
                 <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-white z-10">
                   <span className="sr-only">Next</span>
                   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>

@@ -61,7 +61,7 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
         setMap(null);
       }
     };
-  }, [latitude, longitude, title]);
+  }, [latitude, longitude, title, map]);
 
   return (
     <>

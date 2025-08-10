@@ -32,7 +32,7 @@ export default function ClientSlugHandler({
     return () => {
       window.removeEventListener("message", handleMessage);
     };
-  }, [localizedSlugs, dispatch]); // Use dispatch instead of setLocalizedSlugs
+  }, [localizedSlugs, dispatch, router]); // Use dispatch instead of setLocalizedSlugs
 
   return null; // This component only handles the state and doesn't render anything.
 }
