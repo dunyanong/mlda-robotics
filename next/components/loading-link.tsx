@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useLoading } from "./loading-provider";
 import { cn } from "@/lib/utils";
@@ -25,6 +25,8 @@ export const LoadingLink = ({
 }: LoadingLinkProps) => {
   const router = useRouter();
   const { setLoading } = useLoading();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Don't handle if it's an external link or opening in new tab
@@ -34,6 +36,14 @@ export const LoadingLink = ({
 
     // Don't handle if cmd/ctrl + click (opening in new tab)
     if (e.metaKey || e.ctrlKey) {
+      return;
+    }
+
+    // Prevent loading if clicking the same page
+    const currentUrl = pathname + (searchParams?.toString() ? `?${searchParams}` : "");
+    if (href === pathname || href === currentUrl) {
+      e.preventDefault();
+      setLoading(false); 
       return;
     }
 

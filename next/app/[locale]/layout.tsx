@@ -18,7 +18,7 @@ const getHardcodedNavbarData = () => {
       { URL: "/contactus", text: "Contact Us", target: "_self" },
     ],
     right_navbar_items: [
-      { URL: "/contactus", text: "Contact Us", target: "_self" }
+      { URL: "/contactus", text: "Join Us", target: "_self" }
     ],
     logo: {
       id: 1,

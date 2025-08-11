@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface LeafletMapProps {
   latitude: number;
@@ -10,13 +10,12 @@ interface LeafletMapProps {
 
 export default function LeafletMap({ latitude, longitude, title }: LeafletMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [map, setMap] = useState<any>(null);
-  const [L, setL] = useState<any>(null);
+  const mapInstanceRef = useRef<any>(null);
 
   useEffect(() => {
-    let mapInstance: any;
+    let leaflet: any;
     const initializeMap = async () => {
-      const leaflet = await import('leaflet');
+      leaflet = await import('leaflet');
 
       if (!document.querySelector('link[href*="leaflet.css"]')) {
         const link = document.createElement('link');
@@ -27,19 +26,17 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
         document.head.appendChild(link);
       }
 
-      setL(leaflet.default);
-
-      // Remove any existing map instance from the container
-      if (mapRef.current && map) {
-        map.remove();
-        setMap(null);
+      // Remove previous map instance if exists
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
       }
-
       if (mapRef.current) {
-        mapInstance = leaflet.default.map(mapRef.current).setView([latitude, longitude], 15);
+        mapRef.current.innerHTML = "";
+        mapInstanceRef.current = leaflet.default.map(mapRef.current).setView([latitude, longitude], 15);
         leaflet.default.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(mapInstance);
+        }).addTo(mapInstanceRef.current);
         const customIcon = leaflet.default.divIcon({
           html: `<div style="width: 16px; height: 16px; background-color: #ef4444; border: 2px solid #ffffff; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
           className: 'custom-marker',
@@ -47,18 +44,18 @@ export default function LeafletMap({ latitude, longitude, title }: LeafletMapPro
           iconAnchor: [8, 8],
         });
         leaflet.default.marker([latitude, longitude], { icon: customIcon })
-          .addTo(mapInstance)
+          .addTo(mapInstanceRef.current)
           .bindPopup(`<div style="color: #374151; font-weight: 500;">${title}</div>`);
-        setMap(mapInstance);
       }
     };
-
     initializeMap();
-
     return () => {
-      if (mapRef.current && map) {
-        map.remove();
-        setMap(null);
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
+      }
+      if (mapRef.current) {
+        mapRef.current.innerHTML = "";
       }
     };
   }, [latitude, longitude, title]);

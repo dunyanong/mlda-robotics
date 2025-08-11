@@ -20,10 +20,9 @@ export const CustomImage = (props: React.ComponentProps<typeof Image>) => {
       width={width}
       height={height}
       loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === 'string' ? src : undefined}
       alt={alt ? alt : "Image"}
       unoptimized={isLocal}
+      {...(props.blurDataURL ? { blurDataURL: props.blurDataURL } : {})}
       {...rest}
     />
   );

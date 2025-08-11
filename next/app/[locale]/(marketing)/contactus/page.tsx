@@ -81,6 +81,14 @@ const getContactPageData = () => {
           {
             question: "Can I collaborate with your team?",
             answer: "Yes! We're always open to collaborations with other research groups, industry partners, and academic institutions. Please reach out with details about your proposed collaboration."
+          },
+          {
+            question: "As a freshman, do I need to be super good to join?",
+            answer: "Not at all! We welcome students of all skill levels. If you're passionate about robotics and eager to learn, we encourage you to apply. Our team values enthusiasm and a willingness to grow."
+          },
+          {
+            question: "Are members expected to travel overseas for competitions?",
+            answer: "It depends on the competition. Some competitions may require travel, while others can be participated in locally. We will provide all necessary support and information regarding travel arrangements."
           }
         ]
       },
