@@ -78,10 +78,8 @@ export async function generateMetadata({
 
 export default async function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
   const navbarData = getHardcodedNavbarData();
   const footerData = getHardcodedFooterData();
@@ -91,12 +89,11 @@ export default async function RootLayout({
       <LoadingProvider>
         <Navbar
           data={navbarData}
-          locale={params.locale}
         />
         <main className="flex-1">
           {children}
         </main>
-        <Footer footer={footerData} locale={params.locale} />
+        <Footer footer={footerData} />
       </LoadingProvider>
     </div>
   );

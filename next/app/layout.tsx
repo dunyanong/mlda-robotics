@@ -1,5 +1,4 @@
 import type { Viewport } from "next";
-import { Locale, i18n } from '@/i18n.config'
 
 import "./globals.css";
 
@@ -12,19 +11,13 @@ export const viewport: Viewport = {
   ],
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map(locale => ({ lang: locale }))
-}
-
 export default function RootLayout({
-  children,
-  params
+  children
 }: {
   children: React.ReactNode
-  params: { lang: Locale }
 }) {
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <SlugProvider>
           {children}

@@ -34,18 +34,16 @@ const defaultFooterData = {
 };
 
 export const Footer = ({ 
-  footer = defaultFooterData,
-  locale = "en" 
+  footer = defaultFooterData
 }: { 
-  footer?: any,
-  locale?: string 
+  footer?: any
 }) => {
   return (
     <footer className="border-t border-neutral-800 px-8 pt-20 pb-8 relative overflow-hidden bg-black">
       <Container className="flex flex-col items-start justify-start">
         <div className="md:flex items-start justify-between w-full">
           <div className="md:w-1/2">
-            <Logo image={footer?.logo?.image} locale={locale} />
+            <Logo image={footer?.logo?.image} />
             <div className="text-sm text-neutral-500 mt-2 md:w-1/2">
               {footer?.description}
             </div>
@@ -61,7 +59,7 @@ export const Footer = ({
               {footer?.internal_links?.map((link: any, index: number) => (
                 <a
                   key={index}
-                  href={`/${locale}${link.URL}`}
+                  href={link.URL}
                   target={link.target}
                   className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm"
                 >
@@ -76,21 +74,6 @@ export const Footer = ({
               {footer?.policy_links?.map((link: any, index: number) => (
                 <a
                   key={index}
-                  href={`/${locale}${link.URL}`}
-                  target={link.target}
-                  className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm"
-                >
-                  {link.text}
-                </a>
-              ))}
-            </div>
-            <div className="flex flex-col space-y-4">
-              <p className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm font-medium">
-                Social
-              </p>
-              {footer?.social_media_links?.map((link: any, index: number) => (
-                <a
-                  key={index}
                   href={link.URL}
                   target={link.target}
                   className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm"
@@ -100,9 +83,6 @@ export const Footer = ({
               ))}
             </div>
           </div>
-        </div>
-        <div className="text-sm text-neutral-500 mt-8">
-          {footer?.copyright}
         </div>
       </Container>
     </footer>

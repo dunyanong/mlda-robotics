@@ -49,14 +49,12 @@ type Props = {
     target?: string;
   }[];
   logo?: any;
-  locale: string;
 };
 
 export const DesktopNavbar = ({
   leftNavbarItems = defaultLeftNavbarItems,
   rightNavbarItems = defaultRightNavbarItems,
   logo = defaultLogo,
-  locale,
 }: Props) => {
   const { scrollY } = useScroll();
 
@@ -104,11 +102,11 @@ export const DesktopNavbar = ({
         )}
       </AnimatePresence>
       <div className="flex flex-row gap-2 items-center">
-        <Logo image={logo?.image} locale={locale} />
+        <Logo image={logo?.image} />
         <div className="flex items-center gap-1.5">
           {leftNavbarItems.map((item, idx) => (
             <NavbarItem
-              href={`/${locale}${item.URL}`}
+              href={item.URL}
               key={`link=${idx}`}
               target={item.target}
             >
@@ -118,10 +116,10 @@ export const DesktopNavbar = ({
         </div>
       </div>
       <div className="flex space-x-2 items-center">
-        <LocaleSwitcher currentLocale={locale} />
+        <LocaleSwitcher />
         {rightNavbarItems.map((item, idx) => (
           <Link
-            href={item.URL ? `/${locale}${item.URL}` : '#'}
+            href={item.URL ? item.URL : '#'}
             key={`link=${idx}`}
             target={item.target}
           >
