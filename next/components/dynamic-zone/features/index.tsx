@@ -137,6 +137,7 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
         <Subheading className="max-w-3xl mx-auto">
           {sub_heading}
         </Subheading>
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 py-10">
           {globe_card && (
             <Card className={`md:col-span-${convertWordToNumber(globe_card?.span) || '2'}`} >
@@ -200,6 +201,29 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
             </Card>
           )}
         </div>
+
+        {steps && steps.length > 0 && (
+          <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8">
+              {steps.map((step) => (
+                <div
+                  key={step.title}
+                  className="bg-neutral-900 rounded-xl p-6 flex flex-col items-start shadow-lg border border-neutral-800"
+                >
+                  <h3 className="text-lg font-bold text-white mb-1">{step.title}</h3>
+                  <p className="text-neutral-400 mb-2 text-start">{step.description}</p>
+                  <a
+                    href={step.CTA.URL}
+                    target={step.CTA.target}
+                    className="text-indigo-400 hover:underline text-sm"
+                  >
+                    {step.CTA.text}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </Container>
     </GradientContainer >
   );

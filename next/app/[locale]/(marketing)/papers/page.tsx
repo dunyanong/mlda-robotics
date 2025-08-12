@@ -16,21 +16,7 @@ const getPaperPageData = () => {
         __component: "dynamic-zone.hero",
         id: 1,
         heading: "Technical Papers & Publications",
-        sub_heading: "Browse our team's research papers and technical reports in robotics and autonomous systems.",
-        CTAs: [
-          {
-            text: "Submit Your Paper",
-            URL: "/contactus",
-            variant: "primary",
-            target: "_self"
-          },
-          {
-            text: "Read More",
-            URL: "/projects",
-            variant: "simple",
-            target: "_self"
-          }
-        ]
+        sub_heading: "Browse our team's research papers and technical reports in robotics and autonomous systems."
       },
       {
         __component: "dynamic-zone.features",
@@ -43,17 +29,25 @@ const getPaperPageData = () => {
         social_media_card: null,
         steps: [
           {
-            title: "Robust Autonomous Navigation in Dense Environments",
-            description: "Dun Yan Ong, Sarah Chen, Michael Zhang. Presented at ICRA BARN 2024. Explores MPC and SLAM integration for real-world robotics.",
+            title: "ICRA 2025",
+            description: "Details advanced control strategies for autonomous vehicles.",
+            CTA: {
+              text: "Read More",
+              URL: "/papers/barn25_report.pdf",
+              variant: "simple",
+              target: "_self",
+            },
           },
           {
-            title: "Mode Switching Logic for Nonlinear MPC",
-            description: "Emily Rodriguez, James Liu. Published in Robotics Journal 2025. Details advanced control strategies for autonomous vehicles.",
+            title: "ICRA 2024",
+            description: "Explores MPC and SLAM integration for real-world robotics.",
+            CTA: {
+              text: "Read More",
+              URL: "/papers/barn24_report.pdf",
+              variant: "simple",
+              target: "_self",
+            },
           },
-          {
-            title: "LiDAR-Based Obstacle Detection and Avoidance",
-            description: "Lisa Wang, Alex Kim. Conference on Autonomous Systems 2025. Focuses on perception and real-time obstacle handling.",
-          }
         ]
       },
       {

@@ -11,69 +11,69 @@ const teams = [
 			{
 				name: "Dun Yan",
 				role: "Team Lead",
-				image: "/team.jpg",
+				image: "/members/2026/DunYan.jpeg",
 				link: "https://www.linkedin.com/in/dunyan/",
 			},
 			{
 				name: "Chan Jin You",
 				role: "Deputy Team Lead",
-				image: "/yokohama2.jpg",
+				image: "/members/2026/chanjinyou.jpeg",
 				link: "https://www.linkedin.com/in/jychan0527/",
 			},
 			{
 				name: "Jason",
 				role: "Senior Engineer",
-				image: "/mlda.jpg",
-				link: "/",
+				image: "/members/unknown.jpg",
+				link: "/en",
 			},
 		],
 	},
-	{
-		year: "AY 2025",
-		members: [
-			{
-				name: "Dun Yan Ong",
-				role: "Team Lead",
-				image: "/team.jpg",
-				link: "https://github.com/ongdunyan",
-			},
-			{
-				name: "Sarah Chen",
-				role: "Control Systems",
-				image: "/ntueee.jpg",
-				link: "https://linkedin.com/in/sarahchen2025",
-			},
-			{
-				name: "Michael Zhang",
-				role: "SLAM Specialist",
-				image: "/yokohama.jpg",
-				link: "https://github.com/michaelzhang2025",
-			},
-		],
-	},
-	{
-		year: "AY 2024",
-		members: [
-			{
-				name: "Emily Rodriguez",
-				role: "Software Engineer",
-				image: "/team.jpg",
-				link: "https://linkedin.com/in/emilyrodriguez2024",
-			},
-			{
-				name: "James Liu",
-				role: "Hardware Engineer",
-				image: "/ntueee.jpg",
-				link: "https://github.com/jamesliu2024",
-			},
-			{
-				name: "Anna Tan",
-				role: "Project Manager",
-				image: "/mlda.jpg",
-				link: "https://linkedin.com/in/annatan2024",
-			},
-		],
-	},
+	// {
+	// 	year: "AY 2025",
+	// 	members: [
+	// 		{
+	// 			name: "Dun Yan Ong",
+	// 			role: "Team Lead",
+	// 			image: "/team.jpg",
+	// 			link: "https://github.com/ongdunyan",
+	// 		},
+	// 		{
+	// 			name: "Sarah Chen",
+	// 			role: "Control Systems",
+	// 			image: "/ntueee.jpg",
+	// 			link: "https://linkedin.com/in/sarahchen2025",
+	// 		},
+	// 		{
+	// 			name: "Michael Zhang",
+	// 			role: "SLAM Specialist",
+	// 			image: "/yokohama.jpg",
+	// 			link: "https://github.com/michaelzhang2025",
+	// 		},
+	// 	],
+	// },
+	// {
+	// 	year: "AY 2024",
+	// 	members: [
+	// 		{
+	// 			name: "Emily Rodriguez",
+	// 			role: "Software Engineer",
+	// 			image: "/team.jpg",
+	// 			link: "https://linkedin.com/in/emilyrodriguez2024",
+	// 		},
+	// 		{
+	// 			name: "James Liu",
+	// 			role: "Hardware Engineer",
+	// 			image: "/ntueee.jpg",
+	// 			link: "https://github.com/jamesliu2024",
+	// 		},
+	// 		{
+	// 			name: "Anna Tan",
+	// 			role: "Project Manager",
+	// 			image: "/mlda.jpg",
+	// 			link: "https://linkedin.com/in/annatan2024",
+	// 		},
+	// 	],
+	// },
 ];
 
 function TeamMemberCard({ member }: { member: any }) {

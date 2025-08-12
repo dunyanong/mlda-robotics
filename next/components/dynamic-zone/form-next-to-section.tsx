@@ -136,7 +136,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
             <h1 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-white">
               {heading}
             </h1>
-            <p className="mt-4 text-muted   text-sm max-w-sm">
+            <p className="mt-4 text-muted text-sm">
               {sub_heading}
             </p>
           </div>
