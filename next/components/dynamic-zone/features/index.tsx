@@ -190,7 +190,7 @@ export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_car
                   <a href="https://github.com/mlda-ntu" target="_blank" rel="noopener noreferrer">
                     <IconContainer><IconBrandGithub className="w-6 h-6" /></IconContainer>
                   </a>
-                  <a href="https://linkedin.com/company/mlda-ntu" target="_blank" rel="noopener noreferrer">
+                  <a href="https://linkedin.com/team/mlda-ntu" target="_blank" rel="noopener noreferrer">
                     <IconContainer><LinkedInIcon /></IconContainer>
                   </a>
                   <a href="https://instagram.com/mlda_ntu" target="_blank" rel="noopener noreferrer">

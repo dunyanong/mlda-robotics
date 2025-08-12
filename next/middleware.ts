@@ -1,12 +1,29 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Remove locale detection and redirection logic
-  return;
+  const { pathname } = request.nextUrl;
+
+  // Redirect from `/` to `/en`
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL('/en', request.url));
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
-}
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/en',
+      },
+      {
+        source: '/:locale/:path*',
+        destination: '/:locale/:path*',
+      },
+    ];
+  },
+};

@@ -93,7 +93,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/company/mlda-ntu",
+      href: "https://linkedin.com/team/mlda-ntu",
       icon: (
         <svg
           className="w-5 h-5"

@@ -6,7 +6,7 @@ import { Logo } from "./logo";
 const defaultFooterData = {
   logo: {
     id: 1,
-    company: "MLDA Robotics",
+    team: "MLDA Robotics",
     image: {
       url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%23000000'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='32' font-family='Arial, sans-serif'%3eMLDA%3c/text%3e%3c/svg%3e",
       alternativeText: "MLDA Robotics Logo"
@@ -16,19 +16,19 @@ const defaultFooterData = {
   copyright: "© 2025 MLDA Robotics Team. All rights reserved.",
   // built_with: "Built with Next.js, Tailwind CSS, Motion Animation Lib, and Aceternity UI",
   internal_links: [
-    { text: "About", URL: "/about", target: "_self" },
-    { text: "Team", URL: "/team", target: "_self" },
-    { text: "Papers", URL: "/papers", target: "_self" },
-    { text: "Contact Us", URL: "/contactus", target: "_self" }
+    // { text: "About", URL: "/about", target: "_self" },
+    { text: "Team", URL: "/en/team", target: "_self" },
+    { text: "Papers", URL: "/en/papers", target: "_self" },
+    { text: "Contact Us", URL: "/en/contactus", target: "_self" }
   ],
-  policy_links: [
-    { text: "Privacy Policy", URL: "/privacy", target: "_self" },
-    { text: "Terms of Service", URL: "/terms", target: "_self" },
-    { text: "Contact", URL: "/contact", target: "_self" }
-  ],
+  // policy_links: [
+  //   { text: "Privacy Policy", URL: "/privacy", target: "_self" },
+  //   { text: "Terms of Service", URL: "/terms", target: "_self" },
+  //   { text: "Contact", URL: "/contact", target: "_self" }
+  // ],
   social_media_links: [
     { text: "GitHub", URL: "https://github.com/mlda-ntu", target: "_blank" },
-    { text: "LinkedIn", URL: "https://linkedin.com/company/mlda-ntu", target: "_blank" },
+    { text: "LinkedIn", URL: "https://linkedin.com/team/mlda-ntu", target: "_blank" },
     { text: "Instagram", URL: "https://instagram.com/mlda_ntu", target: "_blank" }
   ]
 };
@@ -51,10 +51,10 @@ export const Footer = ({
               {footer?.built_with}
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-10 items-start mt-10 md:mt-0">
+          <div className="grid grid-cols-1 gap-10 items-end mt-10 md:mt-0">
             <div className="flex flex-col space-y-4">
               <p className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm font-medium">
-                Company
+                MLDA@EEE
               </p>
               {footer?.internal_links?.map((link: any, index: number) => (
                 <a
@@ -67,7 +67,7 @@ export const Footer = ({
                 </a>
               ))}
             </div>
-            <div className="flex flex-col space-y-4">
+            {/* <div className="flex flex-col space-y-4">
               <p className="transition-colors hover:text-foreground/80 text-foreground/60 text-sm font-medium">
                 Legal
               </p>
@@ -81,7 +81,7 @@ export const Footer = ({
                   {link.text}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

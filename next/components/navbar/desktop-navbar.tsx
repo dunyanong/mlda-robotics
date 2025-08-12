@@ -30,7 +30,7 @@ const defaultRightNavbarItems: {
 
 const defaultLogo = {
   id: 1,
-  company: "MLDA Robotics",
+  team: "MLDA Robotics",
   image: {
     url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%23000000'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='32' font-family='Arial, sans-serif'%3eMLDA%3c/text%3e%3c/svg%3e",
     alternativeText: "MLDA Robotics Logo",

@@ -11,7 +11,13 @@ const nextConfig = {
   },
   pageExtensions: ["ts", "tsx"],
   async redirects() {
-    let redirections = [];
+    let redirections = [
+      {
+        source: "/",
+        destination: "/en",
+        permanent: false,
+      },
+    ];
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/redirections`
@@ -29,7 +35,7 @@ const nextConfig = {
 
       return redirections;
     } catch (error) {
-      return [];
+      return redirections;
     }
   },
 };
