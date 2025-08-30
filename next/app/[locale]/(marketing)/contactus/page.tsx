@@ -8,26 +8,20 @@ const getContactPageData = () => {
     id: 1,
     slug: "contact",
     seo: {
-      metaTitle: "Contact MLDA Robotics Team - Get in Touch",
-      metaDescription: "Get in touch with the MLDA Robotics Team at NTU EEE. Visit us at our lab or reach out through our contact form for collaborations and inquiries.",
+      metaTitle: "Contact MLDA Robo Team - Get in Touch",
+      metaDescription: "Get in touch with the MLDA Robo Team at NTU EEE. Visit us at our lab or reach out through our contact form for collaborations and inquiries.",
     },
     dynamic_zone: [
       {
         __component: "dynamic-zone.hero",
         id: 1,
         heading: "Get in Touch",
-        sub_heading: "Connect with the MLDA Robotics Team. Whether you're interested in collaboration, have questions about our research, or want to learn more about our projects, we'd love to hear from you.",
+        sub_heading: "Connect with the MLDA Robo Team. Whether you're interested in collaboration, have questions about our research, or want to learn more about our projects, we'd love to hear from you.",
         CTAs: [
           {
-            text: "Visit Our Lab",
-            URL: "#visit",
-            variant: "primary",
-            target: "_self"
-          },
-          {
             text: "Join Us",
-            URL: "#join",
-            variant: "simple",
+            URL: "https://docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform",
+            variant: "primary",
             target: "_self"
           }
         ]
@@ -47,7 +41,7 @@ const getContactPageData = () => {
           heading: "Our Location",
           description: "Find us at the School of Electrical and Electronic Engineering",
           address: {
-            title: "MLDA Robotics Lab",
+            title: "MLDA Robo Lab",
             street: "50 Nanyang Ave",
             building: "School of Electrical and Electronic Engineering",
             room: "S2.1-B4-01",
@@ -75,8 +69,8 @@ const getContactPageData = () => {
         sub_heading: "Common questions about contacting and visiting our lab",
         faqs: [
           {
-            question: "How can I schedule a lab visit?",
-            answer: "You can schedule a visit by emailing us directly. We welcome visitors interested in our research and are happy to provide lab tours."
+            question: "What resources are available under MLDA Robo Team?",
+            answer: "We have access to GPUs (for training ML models), drones, mobile robots and electronic hardwares. These are valuable for both prototyping and final testing."
           },
           {
             question: "Can I collaborate with your team?",
@@ -96,20 +90,14 @@ const getContactPageData = () => {
         __component: "dynamic-zone.cta",
         id: 5,
         heading: "Ready to Join Our Team?",
-        sub_heading: "Interested in joining the MLDA Robotics Team? Check out our recruitment opportunities and application process.",
+        sub_heading: "Interested in joining the MLDA Robo Team? Check out our recruitment opportunities and application process.",
         CTAs: [
           {
             text: "Join Us - Apply Here",
-            URL: "https://www.notion.so/mlda-robotics/Join-MLDA-Robotics-Team-Recruitment-Template-123456789",
+            URL: "https://docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform",
             variant: "primary",
             target: "_blank"
           },
-          {
-            text: "Learn More About Us",
-            URL: "/about",
-            variant: "simple",
-            target: "_self"
-          }
         ]
       }
     ]

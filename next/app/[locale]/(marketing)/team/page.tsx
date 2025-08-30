@@ -102,7 +102,7 @@ export default function TeamPage() {
 		<Container className="py-40">
 			<Heading>Our Team</Heading>
 			<Subheading className="max-w-3xl mx-auto mb-10">
-				Meet the MLDA Robotics Team members across different academic years.
+				Meet the MLDA Robo Team members across different academic years.
 			</Subheading>
 			<div className="space-y-16">
 				{teams.map((team) => (

@@ -8,7 +8,7 @@ const getHardcodedPageData = () => {
     id: 1,
     slug: "home",
     seo: {
-      metaTitle: "MLDA Robotics Team - Building Autonomous Systems",
+      metaTitle: "MLDA Robo Team - Building Autonomous Systems",
       metaDescription: "Robotics Team under NTU EEE and MLDA@EEE, building autonomous systems",
     },
     dynamic_zone: [
@@ -20,7 +20,7 @@ const getHardcodedPageData = () => {
         CTAs: [
           {
             text: "Join Our Team",
-            URL: "/contactus",
+            URL: "https://docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform",
             variant: "primary",
             target: "_self"
           },
@@ -68,7 +68,7 @@ const getHardcodedPageData = () => {
         CTAs: [
           {
             text: "Apply Now",
-            URL: "/contactus",
+            URL: "https:/docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform",
             variant: "primary",
             target: "_self"
           },

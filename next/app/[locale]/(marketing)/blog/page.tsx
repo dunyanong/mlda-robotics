@@ -10,8 +10,8 @@ const getHardcodedBlogData = () => {
   return {
     id: 1,
     seo: {
-      metaTitle: "MLDA Robotics Blog - Latest Research and Insights",
-      metaDescription: "Stay up to date with the latest MLDA Robotics research, competition updates, and autonomous systems insights.",
+      metaTitle: "MLDA Robo Blog - Latest Research and Insights",
+      metaDescription: "Stay up to date with the latest MLDA Robo research, competition updates, and autonomous systems insights.",
     },
     dynamic_zone: [
       // {

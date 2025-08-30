@@ -35,12 +35,12 @@ function convertWordToNumber(word: string) {
 export const Features = ({ heading, sub_heading, globe_card, ray_card, graph_card, social_media_card, steps }: { heading: string, sub_heading: string, globe_card: any, ray_card: any, graph_card: any, social_media_card: any, steps?: any[] }) => {
   // Move hooks to top level
   const whoImages = [
-    { src: "/team.jpg", alt: "MLDA Robotics Team" },
+    { src: "/team.jpg", alt: "MLDA Robo Team" },
     { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" }
   ];
   const competitionsImages = [
-    { src: "/yokohama.jpg", alt: "ICRA BARN 2024 Yokohama" },
-    { src: "/yokohama2.jpg", alt: "ICRA BARN 2025 Finalist" }
+    { src: "/yokohama2.jpg", alt: "ICRA BARN 2025 Finalist" },
+    { src: "/yokohama3.jpg", alt: "ICRA BARN 2025 Finalist 2" }
   ];
   const [whoCurrent, setWhoCurrent] = useState(0);
   const [compCurrent, setCompCurrent] = useState(0);

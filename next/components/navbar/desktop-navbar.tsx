@@ -25,15 +25,15 @@ const defaultRightNavbarItems: {
   text: string;
   target?: string;
 }[] = [
-  { URL: "/contact", text: "Join Us", target: "_self" }
+  { URL: "https://docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform", text: "Join Us", target: "_self" }
 ];
 
 const defaultLogo = {
   id: 1,
-  team: "MLDA Robotics",
+  team: "MLDA Robo",
   image: {
     url: "data:image/svg+xml,%3csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='200' height='200' fill='%23000000'/%3e%3ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23FFFFFF' font-size='32' font-family='Arial, sans-serif'%3eMLDA%3c/text%3e%3c/svg%3e",
-    alternativeText: "MLDA Robotics Logo",
+    alternativeText: "MLDA Robo Logo",
   },
 };
 

@@ -20,17 +20,41 @@ export const CTA = ({ heading, sub_heading, CTAs, locale }: { heading: string; s
           </p>
         </div>
         <div className="flex items-center gap-4">
-          {CTAs && CTAs.map((cta, index) => (
-            <Button 
-              as={Link} 
-              key={index} 
-              href={cta?.URL ? `/${locale}${cta.URL}` : '#'} 
-              variant={cta.variant} 
-              className="py-3"
-            >
-              {cta.text}
-            </Button>
-          ))}
+          {CTAs && CTAs.map((cta, index) => {
+            // Only prepend locale for internal links
+            const isInternal = cta?.URL && (cta.URL.startsWith("/") && !cta.URL.startsWith("//"));
+            const isExternal = cta?.URL && (cta.URL.startsWith("http://") || cta.URL.startsWith("https://"));
+            const href = cta?.URL
+              ? isInternal
+                ? `/${locale}${cta.URL}`.replace(/\/\/+/, "/") // avoid double slashes
+                : cta.URL
+              : '#';
+            if (isExternal) {
+              return (
+                <a
+                  key={index}
+                  href={href}
+                  target={cta.target || "_blank"}
+                  rel="noopener noreferrer"
+                  className="py-3"
+                >
+                  <Button variant={cta.variant}>{cta.text}</Button>
+                </a>
+              );
+            }
+            return (
+              <Button 
+                as={Link} 
+                key={index} 
+                href={href} 
+                variant={cta.variant} 
+                className="py-3"
+                target={cta.target}
+              >
+                {cta.text}
+              </Button>
+            );
+          })}
         </div>
       </Container>
     </div>
