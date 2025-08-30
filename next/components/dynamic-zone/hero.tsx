@@ -10,7 +10,8 @@ import { motion } from "framer-motion";
 
 export const Hero = ({ heading, sub_heading, CTAs, locale }: { heading: string; sub_heading: string; CTAs: any[], locale: string }) => {
   return (
-    <div className="min-h-[50vh] lg:min-h-screen overflow-hidden relative flex flex-col items-center justify-center px-4 sm:px-6">      <motion.div
+    <div className="min-h-screen overflow-hidden relative flex flex-col items-center justify-center px-4 sm:px-6">
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
