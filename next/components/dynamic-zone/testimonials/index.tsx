@@ -38,7 +38,7 @@ const defaultTestimonials = [
 	},
 	{
 		id: 3,
-		text: "Working with the MLDA Robotics team has been incredible. Dun Yan's leadership and the team's technical expertise make them formidable competitors.",
+		text: "Working with the MLDA Robo team has been incredible. Dun Yan's leadership and the team's technical expertise make them formidable competitors.",
 		user: {
 			firstname: "Dr. Emily",
 			lastname: "Rodriguez",

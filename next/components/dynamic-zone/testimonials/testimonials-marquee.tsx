@@ -34,7 +34,7 @@ const hardcodedTestimonials = [
 	},
 	{
 		id: 3,
-		text: "Working with the MLDA Robotics team has been incredible. Dun Yan's leadership and the team's technical expertise make them formidable competitors.",
+		text: "Working with the MLDA Robo team has been incredible. Dun Yan's leadership and the team's technical expertise make them formidable competitors.",
 		user: {
 			firstname: "Dr. Emily",
 			lastname: "Rodriguez",
@@ -99,7 +99,7 @@ const hardcodedTestimonials = [
 	},
 	{
 		id: 8,
-		text: "The MLDA Robotics team's work on LiDAR processing and obstacle detection showcases practical engineering skills essential for real-world robotics.",
+		text: "The MLDA Robo team's work on LiDAR processing and obstacle detection showcases practical engineering skills essential for real-world robotics.",
 		user: {
 			firstname: "Dr. Robert",
 			lastname: "Chang",

@@ -31,16 +31,37 @@ export const Hero = ({ heading, sub_heading, CTAs, locale }: { heading: string; 
         {sub_heading}
       </Subheading>
       <div className="flex space-x-2 items-center mt-8">
-        {CTAs && CTAs.map((cta, index) => (
-          <Button
-            key={cta?.id || `cta-${index}`}
-            as={Link}
-            href={cta?.URL ? `/${locale}${cta.URL}` : '#'}
-            {...(cta.variant && { variant: cta.variant })}
-          >
-            {cta.text}
-          </Button>
-        ))}
+        {CTAs && CTAs.map((cta, index) => {
+          const isInternal = cta?.URL && (cta.URL.startsWith("/") && !cta.URL.startsWith("//"));
+          const isExternal = cta?.URL && (cta.URL.startsWith("http://") || cta.URL.startsWith("https://"));
+          const href = cta?.URL
+            ? isInternal
+              ? `/${locale}${cta.URL}`.replace(/\/\/+/, "/")
+              : cta.URL
+            : '#';
+          if (isExternal) {
+            return (
+              <a
+                key={cta?.id || `cta-${index}`}
+                href={href}
+                target={cta.target || "_blank"}
+                rel="noopener noreferrer"
+              >
+                <Button variant={cta.variant}>{cta.text}</Button>
+              </a>
+            );
+          }
+          return (
+            <Button
+              key={cta?.id || `cta-${index}`}
+              as={Link}
+              href={href}
+              {...(cta.variant && { variant: cta.variant })}
+            >
+              {cta.text}
+            </Button>
+          );
+        })}
       </div>
       <div className="absolute inset-x-0 bottom-0 h-80 w-full bg-gradient-to-t from-charcoal to-transparent" />
     </div>

@@ -8,8 +8,8 @@ const getPaperPageData = () => {
     id: 1,
     slug: "papers",
     seo: {
-      metaTitle: "MLDA Robotics Team - Technical Papers",
-      metaDescription: "Explore technical papers and publications from the MLDA Robotics Team at NTU EEE and MLDA@EEE.",
+      metaTitle: "MLDA Robo Team - Technical Papers",
+      metaDescription: "Explore technical papers and publications from the MLDA Robo Team at NTU EEE and MLDA@EEE.",
     },
     dynamic_zone: [
       {

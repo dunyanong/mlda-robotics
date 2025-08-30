@@ -1,6 +1,6 @@
-# MLDA Robotics Team
+# MLDA Robo Team
 
-Welcome to the **MLDA Robotics Team** repository! We are a passionate robotics team under NTU EEE and MLDA@EEE, focused on building autonomous systems and pushing the boundaries of robotics research.
+Welcome to the **MLDA Robo Team** repository! We are a passionate robotics team under NTU EEE and MLDA@EEE, focused on building autonomous systems and pushing the boundaries of robotics research.
 
 ## 🌌 Get started
 
@@ -40,12 +40,12 @@ This installs dependencies, builds your project, and starts your server.
 
 ## Features Overview ✨
 
-### MLDA Robotics Team
+### MLDA Robo Team
 
 - **Autonomous Navigation**: Advanced MPC and SLAM integration for real-world robotics.
 - **Technical Papers**: Explore our team's research papers and technical reports in robotics and autonomous systems.
 - **Competitions**: Major milestones and achievements in robotics competitions, including ICRA BARN Challenge.
-- **Team**: Meet the MLDA Robotics Team members across different academic years.
+- **Team**: Meet the MLDA Robo Team members across different academic years.
 - **Contact & Collaboration**: Connect with us for research opportunities, collaborations, and outreach events.
 
 ## Resources

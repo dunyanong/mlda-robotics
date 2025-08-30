@@ -31,7 +31,7 @@ const MapComponent = ({ latitude, longitude }: { latitude?: number, longitude?: 
     <LeafletMap 
       latitude={latitude || 1.3460}
       longitude={longitude || 103.6802}
-      title="MLDA Robotics Lab"
+      title="MLDA Robo Lab"
     />
   );
 };
@@ -229,7 +229,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
                 <div className="flex items-start gap-3">
                   <IconMapPin className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <div className="space-y-1">
-                    <h3 className="font-semibold text-white">MLDA Robotics Lab</h3>
+                    <h3 className="font-semibold text-white">MLDA Robo Lab</h3>
                     <div className="text-sm text-neutral-300 space-y-1">
                       <p>50 Nanyang Ave</p>
                       <p>Nanyang Technological University</p>
