@@ -100,7 +100,7 @@ export const Brands = ({
 								alt={logo.image?.alternativeText || logo.title}
 								width={400}
 								height={400}
-								className="md:h-20 md:w-60 h-10 w-40 object-contain filter"
+								className="h-20 w-40 sm:h-32 sm:w-56 md:h-40 md:w-72 lg:h-52 lg:w-[28rem] object-contain filter"
 								draggable={false}
 							/>
 						</motion.div>

@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import StarBackground from "@/components/decorations/star-background";
-import ShootingStars from "@/components/decorations/shooting-star";
 import { motion } from "framer-motion";
 import { IconContainer } from "../icon-container";
 import {
@@ -50,9 +48,6 @@ export const SkeletonFour = () => {
 
   return (
     <div className="p-8 overflow-hidden h-full relative flex flex-col group [perspective:8000px] [transform-style:preserve-3d]">
-      <StarBackground />
-      <ShootingStars />
-
       {icons.map((icon) => (
         <IconContainer
           className={cn(

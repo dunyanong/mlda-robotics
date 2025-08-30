@@ -1,7 +1,5 @@
 "use client";
 
-import StarBackground from "@/components/decorations/star-background";
-import ShootingStars from "@/components/decorations/shooting-star";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -130,7 +128,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
 
   return (
     <div className="w-full min-h-screen grid grid-cols-1 md:grid-cols-2 relative overflow-hidden">
-      <div className="flex relative z-20 items-center w-full justify-center px-4 py-4 lg:py-40 sm:px-6 lg:flex-none lg:px-20  xl:px-24">
+      <div className="flex relative z-20 items-center w-full justify-center px-4 py-8 sm:py-12 md:py-20 lg:py-40 sm:px-6 lg:flex-none lg:px-20 xl:px-24 min-h-[60vh] md:min-h-0">
         <div className="mx-auto w-full max-w-md">
           <div>
             <h1 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-white">
@@ -141,7 +139,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
             </p>
           </div>
 
-          <div className="py-10">
+          <div className="py-8 sm:py-10">
             <div>
               <form
                 className="space-y-4"
@@ -192,7 +190,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
           </div>
           <div className="flex items-center justify-center space-x-4 py-4">
             {socialMediaLinks.map((social) => (
-                <Link href={social.href} target="_blank" key={social.name}>
+                <Link href={social.href} target="_blank" key={social.name} className="hover:scale-110 transition-transform">
                   {social.icon}
                 </Link>
               ))}
@@ -200,9 +198,7 @@ export function FormNextToSection({ heading, sub_heading, form, section, content
         </div>
       </div>
       
-      <div className="relative w-full z-20 hidden md:flex border-l border-charcoal overflow-hidden bg-neutral-900">
-        <StarBackground />
-        <ShootingStars />
+      <div className="relative w-full z-20 hidden md:flex border-l border-charcoal overflow-hidden bg-neutral-900 min-h-[60vh]">
         
         {hasLocationContent ? (
           // Show location content with map and address
