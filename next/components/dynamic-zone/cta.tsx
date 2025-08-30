@@ -19,7 +19,7 @@ export const CTA = ({ heading, sub_heading, CTAs, locale }: { heading: string; s
             {sub_heading}
           </p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-8 md:mt-0">
           {CTAs && CTAs.map((cta, index) => {
             // Only prepend locale for internal links
             const isInternal = cta?.URL && (cta.URL.startsWith("/") && !cta.URL.startsWith("//"));
