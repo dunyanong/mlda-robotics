@@ -23,12 +23,6 @@ const getHardcodedPageData = () => {
             URL: "https://docs.google.com/forms/d/e/1FAIpQLSe2YGzSc73LTPySFZUIff1uZj9co2wXElG8HrG16B_U1JzsjA/viewform",
             variant: "primary",
             target: "_self"
-          },
-          {
-            text: "Our Papers",
-            URL: "/papers",
-            variant: "simple",
-            target: "_self"
           }
         ]
       },
